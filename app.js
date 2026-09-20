@@ -273,7 +273,7 @@ require([
       collisionsLayer
         .queryFeatureCount(totalCollisionsQuery)
         .then(function (count) {
-          document.getElementById("collisionsCount").innerText = count;
+          document.getElementById("totalCollisionsCount").innerText = count;
         });
     }
   
