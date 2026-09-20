@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City of Menlo Park Traffic Collisions (2017-2021) </title>
+  <link rel="stylesheet" href="style.css"></link>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.27/esri/themes/light/main.css">
+  <script>
+    const options = {
+      dojoConfig: {
+        async: true,
+        packages: [{
+          location: "https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js",
+          name: 'Chart'
+        }]
+      }
+    };
+  </script>
+
+  <script src="https://js.arcgis.com/4.27/"></script>
+  <script src="app.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Title -->
+  <div id="titleDiv">City of Menlo Park Traffic Collisions (2017-2021) </div>
+
+<div id="mainContainer">
+ 
+  <!-- Widget Container -->
+  <div id="widgetsContainer">
+   <div class="collisions-count-widget">
+  <p class="collisions-count-number" id="totalCollisionsCount">0</p>
+  <p class="collisions-count-label">Total Traffic Collisions</p>
+</div>
+    <div class="widget">
+      <h3>Day of the Week</h3>
+      <canvas id="dayOfWeekChart"></canvas>
+    </div>
+    <div class="widget">
+      <h3>Month of Year</h3>
+      <canvas id="monthOfYearChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="viewDiv"></div>
+</div>
+
+<!-- Year Slider -->
+<div id="yearSliderContainer">
+  <label for="yearSlider">Select Year: <span id="selectedYear">TOTAL</span></label><br>
+  <input type="range" id="yearSlider" min="0" max="5" value="0" step="1">
+  <div style="display: flex; justify-content: space-between; width: 80%; margin: auto;">
+    <span>Total</span><span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span>
+  </div>
+</div>
+  
+  <!-- Layer Controls -->
+  <div id="layerControls">
+    <h3>Select Layers to Display:</h3>
+    <label><input type="checkbox" id="boundaryLayer" checked> City Boundary</label>
+    <label><input type="checkbox" id="hinLayer" checked> High Injury Network</label>
+    <label><input type="checkbox" id="intersectionsLayer" checked> Intersections</label>
+    <label><input type="checkbox" id="collisionsLayer" checked> Traffic Collisions (2017-2021)</label>
+  </div>
+
+ 
+
+  </body>
+
+</html>
