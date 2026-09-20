@@ -4,6 +4,8 @@ An interactive Web GIS application for exploring traffic collisions in Menlo Par
 
 Built with the **ArcGIS API for JavaScript**, **Chart.js**, HTML, CSS, and JavaScript, the application combines interactive mapping, temporal filtering, summary statistics, and supporting transportation-safety layers.
 
+`web-gis` · `arcgis-javascript` · `javascript` · `chartjs` · `traffic-safety` · `data-visualization` · `gis`
+
 ## Features
 
 * Interactive collision heatmap
